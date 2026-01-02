@@ -34,7 +34,7 @@ a{color:inherit}
 
 .hero{padding:46px 6px 10px}
 .hero h1{font-size:44px;line-height:1.05;margin:18px 0 10px}
-.hero p{max-width:60ch;color:var(--muted);margin:0 0 18px}
+.hero p{  max-width: none;  width: 100%;}
 .hero-actions{display:flex;gap:10px;flex-wrap:wrap}
 
 .section{padding:42px 0 6px}
