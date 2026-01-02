@@ -7,7 +7,7 @@
 
   <meta
     name="description"
-    content="Harrison Taggart — Cyber Security student portfolio featuring practical Python security tooling, network enumeration, and deployed client-side web applications."
+    content="Harrison Taggart — Cyber Security portfolio showcasing Python security tooling, network enumeration, and deployed client-side web applications."
   />
 
   <link rel="stylesheet" href="assets/style.css" />
@@ -29,9 +29,9 @@
     <section class="hero">
       <h1>Cyber Security Portfolio</h1>
       <p>
-        I’m a Cyber Security student building practical, deployable projects that demonstrate real skills:
-        Python security tooling, network fundamentals, and clear documentation. This portfolio is designed
-        to be recruiter-friendly — short, evidence-based, and focused on what I can actually do.
+        I build practical, deployable projects that demonstrate real cyber security skills —
+        including Python tooling, network fundamentals, and clean client-side web applications.
+        This portfolio focuses on clarity, ethics, and real-world relevance.
       </p>
 
       <div class="hero-actions">
@@ -45,23 +45,6 @@
   <!-- MAIN CONTENT -->
   <main class="container">
 
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About</h2>
-      <div class="card">
-        <p class="muted">
-          My focus is on building and documenting projects that mirror real security work: understanding
-          how systems are exposed, how to assess risk, and how to communicate findings clearly. I’m especially
-          interested in junior cyber/SOC-style roles where I can apply strong fundamentals and keep improving
-          through hands-on work.
-        </p>
-        <p class="note">
-          Projects are built with an emphasis on safe, ethical testing — scanning and security tooling
-          should only be used on systems you own or have explicit permission to test.
-        </p>
-      </div>
-    </section>
-
     <!-- PROJECTS -->
     <section id="projects" class="section">
       <h2>Projects</h2>
@@ -73,29 +56,30 @@
           <h3>Python TCP Port Scanner</h3>
 
           <p class="muted">
-            A Python-based TCP port scanner that identifies open ports on a target host. This project demonstrates
-            core networking knowledge (TCP/IP + sockets) and how exposed services can form an attack surface.
+            A Python-based TCP port scanner that identifies open ports on a target host,
+            demonstrating network enumeration techniques and basic attack surface awareness.
           </p>
 
-<ul class="bullets">
-  <li><strong>Technologies:</strong> HTML, CSS, JavaScript (no frameworks)</li>
-  <li><strong>Inputs:</strong> Driving distance, electricity usage, flights, diet category</li>
-  <li><strong>Logic:</strong> Simplified emissions factors combined into an annual estimate</li>
-  <li><strong>UX focus:</strong> Clear layout, inline guidance, instant feedback</li>
-  <li><strong>Privacy-first design:</strong> All calculations run locally in the browser</li>
-  <li><strong>No backend:</strong> No accounts, no tracking, no data storage</li>
-  <li><strong>Limitations:</strong> Uses approximate emission factors for demonstration purposes</li>
-</ul>
+          <ul class="bullets">
+            <li><strong>Language:</strong> Python</li>
+            <li><strong>Core concepts:</strong> TCP/IP, sockets, port scanning</li>
+            <li><strong>Functionality:</strong> Host input, configurable port ranges, open-port reporting</li>
+            <li><strong>Security relevance:</strong> Identifying exposed services during reconnaissance</li>
+            <li><strong>Planned improvements:</strong> Multithreading, timeouts, banner grabbing</li>
+          </ul>
+
+          <p class="note">
+            ⚠️ Scanning should only be performed on systems you own or have explicit permission to test.
+          </p>
 
           <div class="card-actions">
-            <a class="btn small" href="https://github.com/Tagg02/port-scanner" target="_blank" rel="noreferrer">
+            <a class="btn small"
+               href="https://github.com/Tagg02/port-scanner"
+               target="_blank"
+               rel="noreferrer">
               GitHub Repository
             </a>
           </div>
-
-          <p class="note">
-            ⚠️ Only scan systems you own or have explicit permission to test.
-          </p>
         </article>
 
         <!-- CARBON CALCULATOR -->
@@ -103,22 +87,31 @@
           <h3>HTML Carbon Footprint Calculator</h3>
 
           <p class="muted">
-            A polished, client-side web application that estimates annual carbon footprint (tCO₂e/year) based on
-            lifestyle inputs. Designed with a privacy-first approach — all calculations run locally in the browser.
+            A polished, client-side web application that estimates an individual’s annual
+            carbon footprint (tCO₂e/year) based on common lifestyle inputs.
           </p>
 
           <ul class="bullets">
-            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
-            <li><strong>Focus:</strong> Clean UI, input validation, readable logic</li>
-            <li><strong>Privacy:</strong> No backend, no tracking, no data storage</li>
+            <li><strong>Technologies:</strong> HTML, CSS, JavaScript (no frameworks)</li>
+            <li><strong>Inputs:</strong> Driving distance, electricity usage, flights, diet</li>
+            <li><strong>Logic:</strong> Simplified emissions factors combined into an annual estimate</li>
+            <li><strong>UX focus:</strong> Clear layout, inline guidance, instant feedback</li>
+            <li><strong>Privacy-first:</strong> All calculations run locally in the browser</li>
+            <li><strong>No backend:</strong> No accounts, tracking, or data storage</li>
           </ul>
 
           <div class="card-actions">
-            <a class="btn small" href="https://tagg02.github.io/carbon-calculator/" target="_blank" rel="noreferrer">
+            <a class="btn small"
+               href="https://tagg02.github.io/carbon-calculator/"
+               target="_blank"
+               rel="noreferrer">
               Live Demo
             </a>
 
-            <a class="btn small ghost" href="https://github.com/Tagg02/carbon-calculator" target="_blank" rel="noreferrer">
+            <a class="btn small ghost"
+               href="https://github.com/Tagg02/carbon-calculator"
+               target="_blank"
+               rel="noreferrer">
               GitHub Repo
             </a>
           </div>
@@ -127,25 +120,11 @@
       </div>
     </section>
 
-    <!-- LINKS -->
-    <section id="links" class="section">
-      <h2>Links</h2>
-      <div class="card">
-        <ul class="bullets">
-          <li>
-            <strong>GitHub:</strong>
-            <a href="https://github.com/Tagg02" target="_blank" rel="noreferrer">github.com/Tagg02</a>
-          </li>
-          <li>
-            <strong>LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">Harrison Taggart</a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer class="footer">
-      <p class="muted">© <span id="year"></span> Harrison Taggart — Built with GitHub Pages</p>
+      <p class="muted">
+        © <span id="year"></span> Harrison Taggart — Built with GitHub Pages
+      </p>
     </footer>
   </main>
 
