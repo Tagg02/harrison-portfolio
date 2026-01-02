@@ -49,12 +49,21 @@ a{color:inherit}
   border-radius:var(--radius);
   padding:18px;
   box-shadow:var(--shadow);
+  display: flex;
+  flex-direction: column;
 }
 .card h3{margin:0 0 8px}
 .muted{color:var(--muted)}
 .note{color:var(--muted);font-size:13px;margin-top:14px}
 .bullets{margin:12px 0 0 18px;color:var(--muted)}
 .bullets li{margin:6px 0}
+
+.card-actions {
+  margin-top: auto;
+  display: flex;
+  gap: 10px;
+  padding-top: 16px;
+}
 
 .btn{
   display:inline-block;
