@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Harrison Taggart | Cyber Security Portfolio</title>
 
-  <meta name="description" content="Cyber Security student portfolio showcasing practical Python security tooling, network fundamentals, and client-side web applications." />
+  <meta
+    name="description"
+    content="Harrison Taggart — Cyber Security student portfolio featuring practical Python security tooling, network enumeration, and client-side web applications. Built with clear documentation, safe/ethical testing guidance, and real project outcomes."
+  />
 
   <link rel="stylesheet" href="assets/style.css" />
 </head>
@@ -19,27 +22,46 @@
       <div class="links">
         <a href="#projects">Projects</a>
         <a href="#calculator">Calculator</a>
-        <a href="#contact">Contact</a>
+        <a href="https://github.com/Tagg02" target="_blank" rel="noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </nav>
 
     <section class="hero">
       <h1>Cyber Security Portfolio</h1>
       <p>
-        Cyber Security student portfolio demonstrating practical Python tooling,
-        network security fundamentals, and client-side web development.
-        Built to showcase real-world skills rather than theory alone.
+        I’m a Cyber Security student building practical, deployable projects that demonstrate real skills:
+        Python security tooling, network fundamentals, and clear documentation. This portfolio is designed
+        to be recruiter-friendly — short, evidence-based, and focused on what I can actually do.
       </p>
 
       <div class="hero-actions">
         <a class="btn" href="#projects">View Projects</a>
-        <a class="btn ghost" href="#contact">Contact</a>
+        <a class="btn ghost" href="https://github.com/Tagg02" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="btn ghost" href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">LinkedIn</a>
       </div>
     </section>
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="container">
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About</h2>
+      <div class="card">
+        <p class="muted">
+          My focus is on building and documenting projects that mirror real security work: understanding
+          how systems are exposed, how to assess risk, and how to communicate findings clearly. I’m especially
+          interested in junior cyber/SOC-style roles where I can apply strong fundamentals and keep improving
+          through hands-on work.
+        </p>
+        <p class="note">
+          Everything here is built with an emphasis on safe, ethical testing — scanning and security tooling
+          should only be used on systems you own or have explicit permission to test.
+        </p>
+      </div>
+    </section>
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
@@ -52,15 +74,15 @@
           <h3>Python TCP Port Scanner</h3>
 
           <p class="muted">
-            A Python-based TCP port scanner designed to identify open ports on a target host,
-            demonstrating network enumeration techniques and attack surface awareness.
+            A Python-based TCP port scanner that identifies open ports on a target host. This project demonstrates
+            core networking knowledge (TCP/IP + sockets) and how exposed services can form an attack surface.
           </p>
 
           <ul class="bullets">
             <li><strong>Language:</strong> Python</li>
             <li><strong>Core skills:</strong> TCP/IP, sockets, network enumeration</li>
             <li><strong>Features:</strong> Host input, configurable port ranges, open-port reporting</li>
-            <li><strong>Planned improvements:</strong> Multithreading, timeouts, banner grabbing</li>
+            <li><strong>Planned improvements:</strong> Multithreading, timeouts, banner grabbing, export results</li>
           </ul>
 
           <div class="card-actions">
@@ -70,7 +92,7 @@
           </div>
 
           <p class="note">
-            ⚠️ Scanning should only be performed on systems you own or have explicit permission to test.
+            ⚠️ Only scan systems you own or have explicit permission to test.
           </p>
         </article>
 
@@ -79,9 +101,130 @@
           <h3>HTML Carbon Footprint Calculator</h3>
 
           <p class="muted">
-            A lightweight, client-side carbon footprint calculator built using HTML, CSS,
-            and JavaScript. All calculations are performed locally in the browser.
+            A lightweight, client-side calculator built with HTML, CSS, and JavaScript that estimates annual CO₂e
+            from everyday lifestyle inputs. The goal is a clear, usable interface with instant feedback — and a
+            privacy-friendly approach where everything runs locally in the browser.
           </p>
 
           <ul class="bullets">
-            <li><strong
+            <li><strong>Technologies:</strong> HTML, CSS, JavaScript</li>
+            <li><strong>What it demonstrates:</strong> Input handling, validation, calculation logic, clean UI</li>
+            <li><strong>Privacy:</strong> No backend, no accounts, no data storage</li>
+            <li><strong>Future work:</strong> Charts, improved factor sources, saved presets</li>
+          </ul>
+
+          <div class="card-actions">
+            <a class="btn small" href="#calculator">Open Calculator</a>
+            <a class="btn small ghost" href="https://github.com/Tagg02/carbon-calculator" target="_blank" rel="noreferrer">
+              GitHub Repository
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section id="calculator" class="section">
+      <h2>Carbon Footprint Calculator (Demo)</h2>
+
+      <div class="card">
+        <p class="muted">
+          This demo estimates your annual carbon footprint (tCO₂e/year) based on a few simple inputs: weekly driving,
+          monthly electricity use, flights per year, and diet category. It’s intentionally lightweight and runs
+          entirely in the browser — no tracking, no accounts, and no stored data.
+        </p>
+
+        <p class="muted">
+          <strong>How the estimate works:</strong> each input is multiplied by a simplified emissions factor, then combined
+          into a total annual estimate. The purpose here is portfolio demonstration: clear calculations, user-friendly
+          form design, and readable results.
+        </p>
+
+        <p class="note">
+          Note: This is not a scientific audit. Emissions factors vary by country, energy mix, vehicle type, and more.
+          If you want, this can be upgraded to use UK-specific published factors and include a clearer breakdown + charts.
+        </p>
+
+        <form id="cf-form" class="form" autocomplete="off">
+          <div class="form-row">
+            <label>
+              Weekly driving (miles)
+              <input type="number" min="0" step="1" name="miles" placeholder="e.g., 80" />
+            </label>
+            <label>
+              Electricity use (kWh per month)
+              <input type="number" min="0" step="1" name="kwh" placeholder="e.g., 250" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Short flights per year (≈ &lt; 3 hours)
+              <input type="number" min="0" step="1" name="shortFlights" placeholder="e.g., 2" />
+            </label>
+            <label>
+              Long flights per year (≈ &gt; 3 hours)
+              <input type="number" min="0" step="1" name="longFlights" placeholder="e.g., 1" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              Diet
+              <select name="diet">
+                <option value="mixed">Mixed</option>
+                <option value="lowmeat">Low meat</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="vegan">Vegan</option>
+              </select>
+            </label>
+
+            <div class="form-actions">
+              <button class="btn" type="submit">Calculate</button>
+              <button class="btn ghost" type="button" id="reset">Reset</button>
+            </div>
+          </div>
+        </form>
+
+        <div id="result" class="result" hidden>
+          <h3>Your estimate</h3>
+          <p class="big"><span id="totalTons">0.0</span> tCO₂e / year</p>
+          <p class="muted" id="breakdown"></p>
+        </div>
+
+        <p class="note">
+          Privacy note: this calculator does not send or store any of your inputs — everything is processed locally
+          on your device.
+        </p>
+      </div>
+    </section>
+
+    <!-- LINKS -->
+    <section id="links" class="section">
+      <h2>Links</h2>
+      <div class="card">
+        <ul class="bullets">
+          <li>
+            <strong>GitHub:</strong>
+            <a href="https://github.com/Tagg02" target="_blank" rel="noreferrer">github.com/Tagg02</a>
+          </li>
+          <li>
+            <strong>LinkedIn:</strong>
+            <a href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">Harrison Taggart</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <p class="muted">© <span id="year"></span> Harrison Taggart — Built with GitHub Pages</p>
+    </footer>
+  </main>
+
+  <script src="assets/footprint.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
