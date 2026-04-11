@@ -10,42 +10,75 @@
     content="Cyber security portfolio showcasing hands-on projects in Python security tooling, network enumeration, and client-side web applications."
   />
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="assets/style.css" />
 </head>
 
 <body>
 
+  <div class="bg-grid" aria-hidden="true"></div>
+
   <!-- NAV + HERO -->
   <header class="container">
     <nav class="nav">
-      <div class="brand">Harrison Taggart</div>
+      <div class="nav-left">
+        <div class="term-dots" aria-hidden="true">
+          <span class="dot dot-r"></span>
+          <span class="dot dot-y"></span>
+          <span class="dot dot-g"></span>
+        </div>
+        <div class="brand"><span class="accent">~/</span>harrison-taggart</div>
+      </div>
       <div class="links">
-        <a href="#projects">Projects</a>
-        <a href="https://github.com/Tagg02" target="_blank" rel="noreferrer">GitHub</a>
-        <a href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">LinkedIn</a>
+        <a href="#projects"><span class="accent">$</span> projects</a>
+        <a href="https://github.com/Tagg02" target="_blank" rel="noreferrer"><span class="accent">$</span> github</a>
+        <a href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer"><span class="accent">$</span> linkedin</a>
       </div>
     </nav>
 
     <section class="hero">
-      <h1>Cyber Security Portfolio</h1>
-      <p>
-        I’m interested in cyber security with a particular focus on understanding how systems
-        are exposed, assessed, and secured. I enjoy working hands-on with tools and small
-        projects that explore real security concepts such as network enumeration, ethical
-        testing, and analysing potential attack surfaces.
-      </p>
+      <div class="term-window">
+        <div class="term-bar">
+          <div class="term-dots" aria-hidden="true">
+            <span class="dot dot-r"></span>
+            <span class="dot dot-y"></span>
+            <span class="dot dot-g"></span>
+          </div>
+          <span class="term-bar-title">harrison@portfolio:~</span>
+          <span class="term-badge">bash</span>
+        </div>
+        <div class="term-body">
+          <div class="term-line">
+            <span class="t-prompt">harrison@portfolio:~$</span>
+            <span class="t-cmd"> cat about.txt</span>
+          </div>
+          <h1 class="hero-title"><span id="typed-title"></span><span class="cursor" aria-hidden="true">█</span></h1>
+          <p class="t-out">
+            I'm interested in cyber security with a particular focus on understanding how systems
+            are exposed, assessed, and secured. I enjoy working hands-on with tools and small
+            projects that explore real security concepts such as network enumeration, ethical
+            testing, and analysing potential attack surfaces.
+          </p>
+          <p class="t-out">
+            This portfolio highlights practical work rather than theory alone. Each project is
+            designed to demonstrate how I approach problems, make technical decisions, and apply
+            security principles responsibly while continuing to develop my skills for entry-level
+            cyber security and SOC-style roles.
+          </p>
+          <div class="term-line idle-line">
+            <span class="t-prompt">harrison@portfolio:~$</span>
+            <span class="cursor-idle" aria-hidden="true">█</span>
+          </div>
 
-      <p>
-        This portfolio highlights practical work rather than theory alone. Each project is
-        designed to demonstrate how I approach problems, make technical decisions, and apply
-        security principles responsibly while continuing to develop my skills for entry-level
-        cyber security and SOC-style roles.
-      </p>
-
-      <div class="hero-actions">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn ghost" href="https://github.com/Tagg02" target="_blank" rel="noreferrer">GitHub</a>
-        <a class="btn ghost" href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projects"><span class="btn-ch">❯</span> view projects</a>
+            <a class="btn btn-ghost" href="https://github.com/Tagg02" target="_blank" rel="noreferrer"><span class="btn-ch">$</span> github</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/harrison-taggart-22b83133b/" target="_blank" rel="noreferrer"><span class="btn-ch">$</span> linkedin</a>
+          </div>
+        </div>
       </div>
     </section>
   </header>
@@ -55,74 +88,86 @@
 
     <!-- PROJECTS -->
     <section id="projects" class="section">
-      <h2>Projects</h2>
+      <div class="sec-heading">
+        <span class="sec-prompt">$</span>
+        <h2>ls -la projects/</h2>
+      </div>
+      <p class="sec-sub muted">total 2 entries</p>
 
       <div class="grid">
 
         <!-- PORT SCANNER -->
         <article class="card">
-          <h3>Python TCP Port Scanner</h3>
+          <div class="card-bar">
+            <div class="term-dots" aria-hidden="true">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+            </div>
+            <span class="card-fname">port-scanner.py</span>
+            <span class="card-tag">Python</span>
+          </div>
+          <div class="card-body">
+            <h3>Python TCP Port Scanner</h3>
+            <p class="muted">
+              A Python-based TCP port scanner that identifies open ports on a target host,
+              demonstrating network enumeration techniques and basic attack surface awareness.
+            </p>
 
-          <p class="muted">
-            A Python-based TCP port scanner that identifies open ports on a target host,
-            demonstrating network enumeration techniques and basic attack surface awareness.
-          </p>
+            <ul class="ftree">
+              <li><span class="fk">lang</span><span class="fs"> :</span><span class="fv"> Python</span></li>
+              <li><span class="fk">concepts</span><span class="fs"> :</span><span class="fv"> TCP/IP · sockets · port scanning</span></li>
+              <li><span class="fk">features</span><span class="fs"> :</span><span class="fv"> host input, port ranges, open-port reporting</span></li>
+              <li><span class="fk">relevance</span><span class="fs"> :</span><span class="fv"> identifying exposed services during recon</span></li>
+              <li><span class="fk">planned</span><span class="fs"> :</span><span class="fv"> multithreading, timeouts, banner grabbing</span></li>
+            </ul>
 
-          <ul class="bullets">
-            <li><strong>Language:</strong> Python</li>
-            <li><strong>Core concepts:</strong> TCP/IP, sockets, port scanning</li>
-            <li><strong>Functionality:</strong> Host input, configurable port ranges, open-port reporting</li>
-            <li><strong>Security relevance:</strong> Identifying exposed services during reconnaissance</li>
-            <li><strong>Planned improvements:</strong> Multithreading, timeouts, banner grabbing</li>
-          </ul>
+            <p class="note">⚠ Scanning should only be performed on systems you own or have explicit permission to test.</p>
 
-          <p class="note">
-            ⚠️ Scanning should only be performed on systems you own or have explicit permission to test.
-          </p>
-
-          <div class="card-actions">
-            <a class="btn small"
-               href="https://github.com/Tagg02/port-scanner"
-               target="_blank"
-               rel="noreferrer">
-              View GitHub Repository
-            </a>
+            <div class="card-actions">
+              <a class="btn btn-primary small" href="https://github.com/Tagg02/port-scanner" target="_blank" rel="noreferrer">
+                <span class="btn-ch">❯</span> view repository
+              </a>
+            </div>
           </div>
         </article>
 
         <!-- CARBON CALCULATOR -->
         <article class="card">
-          <h3>HTML Carbon Footprint Calculator</h3>
+          <div class="card-bar">
+            <div class="term-dots" aria-hidden="true">
+              <span class="dot dot-r"></span>
+              <span class="dot dot-y"></span>
+              <span class="dot dot-g"></span>
+            </div>
+            <span class="card-fname">carbon-calculator.html</span>
+            <span class="card-tag">HTML/JS</span>
+          </div>
+          <div class="card-body">
+            <h3>HTML Carbon Footprint Calculator</h3>
+            <p class="muted">
+              A client-side web application that estimates an individual's annual carbon
+              footprint (tCO₂e/year) using common lifestyle inputs, with a focus on clean
+              UI design and privacy-first implementation.
+            </p>
 
-          <p class="muted">
-            A client-side web application that estimates an individual’s annual carbon
-            footprint (tCO₂e/year) using common lifestyle inputs, with a focus on clean
-            UI design and privacy-first implementation.
-          </p>
+            <ul class="ftree">
+              <li><span class="fk">stack</span><span class="fs"> :</span><span class="fv"> HTML · CSS · JavaScript (no frameworks)</span></li>
+              <li><span class="fk">inputs</span><span class="fs"> :</span><span class="fv"> driving, electricity, flights, diet</span></li>
+              <li><span class="fk">logic</span><span class="fs"> :</span><span class="fv"> emissions factors → annual estimate</span></li>
+              <li><span class="fk">ux</span><span class="fs"> :</span><span class="fv"> clear layout, inline guidance, instant feedback</span></li>
+              <li><span class="fk">privacy</span><span class="fs"> :</span><span class="fv"> all calculations run locally in the browser</span></li>
+              <li><span class="fk">backend</span><span class="fs"> :</span><span class="fv"> none — no accounts, tracking, or data storage</span></li>
+            </ul>
 
-          <ul class="bullets">
-            <li><strong>Technologies:</strong> HTML, CSS, JavaScript (no frameworks)</li>
-            <li><strong>Inputs:</strong> Driving distance, electricity usage, flights, diet</li>
-            <li><strong>Logic:</strong> Simplified emissions factors combined into an annual estimate</li>
-            <li><strong>UX focus:</strong> Clear layout, inline guidance, instant feedback</li>
-            <li><strong>Privacy-first:</strong> All calculations run locally in the browser</li>
-            <li><strong>No backend:</strong> No accounts, tracking, or data storage</li>
-          </ul>
-
-          <div class="card-actions">
-            <a class="btn small"
-               href="https://tagg02.github.io/carbon-calculator/"
-               target="_blank"
-               rel="noreferrer">
-              View Live Demo
-            </a>
-
-            <a class="btn small ghost"
-               href="https://github.com/Tagg02/carbon-calculator"
-               target="_blank"
-               rel="noreferrer">
-              View GitHub Repository
-            </a>
+            <div class="card-actions">
+              <a class="btn btn-primary small" href="https://tagg02.github.io/carbon-calculator/" target="_blank" rel="noreferrer">
+                <span class="btn-ch">❯</span> live demo
+              </a>
+              <a class="btn btn-ghost small" href="https://github.com/Tagg02/carbon-calculator" target="_blank" rel="noreferrer">
+                <span class="btn-ch">$</span> repository
+              </a>
+            </div>
           </div>
         </article>
 
@@ -131,14 +176,33 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-      <p class="muted">
-        © <span id="year"></span> Harrison Taggart — Built with GitHub Pages
-      </p>
+      <div class="footer-cmd">
+        <span class="t-prompt">$</span>
+        <span class="t-cmd"> echo "© <span id="year"></span> Harrison Taggart · Built with GitHub Pages"</span>
+      </div>
+      <p class="footer-out">© <span id="year2"></span> Harrison Taggart — Built with GitHub Pages</p>
     </footer>
+
   </main>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const yr = new Date().getFullYear();
+    document.getElementById("year").textContent = yr;
+    document.getElementById("year2").textContent = yr;
+
+    // Typing animation
+    const text = "Cyber Security Portfolio";
+    const el = document.getElementById("typed-title");
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        el.textContent += text[i];
+        i++;
+        setTimeout(type, 65);
+      }
+    }
+    setTimeout(type, 500);
   </script>
+
 </body>
 </html>
